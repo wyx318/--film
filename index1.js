@@ -12,10 +12,14 @@ var top250 = {
     },
     //事件
     bind: function () {
-        var _this = this
+       var _this = this
         // 滚动事件
-        this.$element.scroll(function () {
-            _this.start()
+        $('#top250').scroll(function(){
+           if($('#top250').height() + $('#top250').scrollTop() >=
+            $('.container').height() + 10 ){
+              // console.log('你好')
+              _this.start()
+           }
         })
     },
     // 获取数据 并渲染
