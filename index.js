@@ -17,7 +17,8 @@ function start(){
     //小圆圈加载
     $('.loading').show();
     $.ajax({
-        url: '//api.douban.com/v2/movie/top250',
+        url: '//api.douban.com/v2/movie/imdb/tt0111161?apikey=0df993c66c0c636e29ecbb5344252a4a'//'//api.douban.com/v2/movie/top250',
+
         type: 'GET',
         data: {
             start: index,
