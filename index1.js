@@ -37,7 +37,7 @@ var top250 = {
         _this.isLoading = true
         _this.$element.find('.loading').show()
         $.ajax({
-            url: 'https://api.douban.com/v2/movie/top250',
+            url: 'http://api.douban.com/v2/movie/top250?apikey=0df993c66c0c636e29ecbb5344252a4a',
             data: {
                 start: _this.index || 0
             },
@@ -125,7 +125,7 @@ var usBox = {
       _this.isLoading = true
       _this.$element.find('.loading').show()
       $.ajax({
-        url: 'https://api.douban.com/v2/movie/us_box',
+        url: ''http://api.douban.com/v2/movie/us_box?apikey=0df993c66c0c636e29ecbb5344252a4a',
         dataType: 'jsonp'
       }).done(function(ret){
         callback&&callback(ret)
