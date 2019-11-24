@@ -17,8 +17,7 @@ function start(){
     //小圆圈加载
     $('.loading').show();
     $.ajax({
-        url: '//api.douban.com/v2/movie/imdb/tt0111161?apikey=0df993c66c0c636e29ecbb5344252a4a'//'//api.douban.com/v2/movie/top250',
-
+        url: '//api.douban.com/v2/movie/top250',
         type: 'GET',
         data: {
             start: index,
@@ -42,13 +41,13 @@ function start(){
 //滚动加载 数据  下一个20项数据
 // 函数节流
 var clock 
-$('main').scroll(function(){
+$('#top250').scroll(function(){
     if(clock){
         clearTimeout(clock);
     }
     clock = setTimeout(function(){
-        if($('section').eq(0).height() - 10 <= $('main').scrollTop() +
-    $('main').height()){
+        if($('#top250').eq(0).height() - 10 <= $('.container').scrollTop() +
+    $('.container').height()){
         // 重新请求数据 
         start()
     }
